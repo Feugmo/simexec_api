@@ -1,0 +1,111 @@
+/* @media(min-width:660px){
+
+} */
+
+.Nav_bar_cont  {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  border-radius: 3vh;
+  height: 5%;
+  margin-bottom: 2vh;
+  background-color: #d6e5ff;
+}
+
+.Nav_bar_bx0{
+  flex: 4;
+}
+.Nav_bar_bx1{
+  flex: 1;
+}
+
+
+
+.Query_cont_L1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* 
+    justify-content: space-between will equally space the items 
+    used with flex-basis
+    flex-wrap:wrap
+    flex-direction: col;  */
+  }
+
+  .col {
+    display: flex;
+    justify-content: center;
+    flex-direction: col;  
+  }
+
+
+  .Query_box1_L1 {
+    width: 43%;
+    height: 95%;
+    flex-direction: column;
+    display: flex;
+
+
+    /* align-items: flex-start; 
+    default: aligh-item: stretch
+    */
+  }
+
+  .Query_box2_L1 {
+    width: 55%;
+    /* width: 30%; */
+  }
+
+
+
+  .Query_box1_L2{
+    flex: 1.5;
+  }
+
+  .Query_box2_L2 {
+    flex: 1;
+  }
+
+  .Query_box3_L2 {
+    margin-top: 4vh;
+    padding: 0;
+    height: 80%;
+    flex: 8;
+  }
+
+  .UUIDINFO_CT{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .UUIDINFO_BX1{
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .UUIDINFO_BX2{
+    flex: 3;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .UUIDINFO_BX11{
+    flex: 1;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .UUIDINFO_BX11_1{
+    flex: 2;
+  }
+
+ 
+  .Cal_type_Filter_Cont{
+    display: flex;
+    flex-wrap: wrap;
+    
+  }

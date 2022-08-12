@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import './CSS/App.css';
 
+import { EnergyQuery } from './Page/EnergyQuery';
+import { Home } from './Page/Home';
+import { Query } from './Page/ElementQuery';
+import { ProcessStatus } from './Page/ProcessStatus';
+import { TestPage } from './Page/TestPage';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import { UUIDDetail } from './componet/UUIDDetail';
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+      <Router>
+      <div className='neum'>
+          <Routes>
+              <Route exact path='/' element={<Home/>} />
+              <Route path='/query/element/*' element={<Query/>} />
+              <Route path='/query/energy/*' element={<EnergyQuery/>} />
+              <Route path='/query/get_process/*' element={<ProcessStatus/>} />
+              <Route path='/test' element={<TestPage/>} />
+              <Route path='/query/UUID/detail' element={<UUIDDetail/>} />
+          </Routes>
+      </div>
+    </Router>
+    
   );
 }
 
+
+
+
 export default App;
+
+// <ShowDataTR>{JSON.parse(structures)}</ShowDataTR>
