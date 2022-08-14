@@ -30,7 +30,7 @@ import { format } from 'react-string-format';
         },
         title:{
           display: true,
-          text:"Convex Hull"
+          text:"Energy Plot"
         }
       },
         
@@ -41,7 +41,7 @@ import { format } from 'react-string-format';
      
         datasets:[
             {
-                label: "Convex Hull",
+                label: "Energy Plot",
                 data: P_data.ratio,
                 backgroundColor: 'rgba(255, 99, 132, 0.5)',
             }

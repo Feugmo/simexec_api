@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { format } from 'react-string-format'
 export const ElementComp=  ()  => {
-    const [structures,setStrucutres]=useState('[{"Cell":"None","Formula":"NONE","Cal_Type":"None","Energy":"None","UUID":"None"}]')
+    const [structures,setStrucutres]=useState('[{"Space_G":"None","Formula":"NONE","Cal_Type":"None","Energy":"None","UUID":"None"}]')
     const [element, setElement]=useState('')
     const [validate,setValidate]=useState(false)
     const [convex,setConvex]=useState('{"ratio":[0],"type":"Undefined"}')

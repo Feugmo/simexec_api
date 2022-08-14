@@ -9,7 +9,7 @@ export const ShowDataTR = ({SDs}) => {
         <thead>
           <tr>
           <th>Formula</th>
-          <th>Cells</th>
+          <th>Space Group</th>
           <th>Calc Type</th>
           <th>Energy</th>
           <th>UUID</th>
@@ -22,7 +22,7 @@ export const ShowDataTR = ({SDs}) => {
         {SDs.map((sd,idx)=>(
         <tr key={idx}>
           <td key={format("{0} formula",idx)}>{sd.Formula}</td>
-          <td key={format("{0} Cell",idx)}>{sd.Cell}</td>
+          <td key={format("{0} Cell",idx)}>{sd.Space_G}</td>
           <td key={format("{0} Type",idx)}>{sd.Cal_Type}</td>
           <td key={format("{0} Energy",idx)}>{sd.Energy}</td>
           <td key={format("{0} UUID",idx)}>{sd.UUID}</td>

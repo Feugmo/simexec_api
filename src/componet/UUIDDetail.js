@@ -41,19 +41,30 @@ export const UUIDDetail = () => {
 
             </div>
 
+            <div className='molecule_count'>
+              <h1>Total Molecule Count</h1>
+              <h2>{info.Molecules}</h2>
+            </div>
+
+            <div className='spacegroup'>
+              <h1>Space Group for the System</h1>
+              <h2>{info.space_group}</h2>
+
+            </div>
+
             <div className='user'>
-              <h1 style={{margin:'3.5vh 0 0 0', color:'#3c55d7'}}>Performed By: </h1>
+              <h1 style={{margin:'3.5vh 0 0 0', color:'#3c55d7'}}>Computer: </h1>
               <h2 style={{color:'#3c55d7'}}>{info.Computer}</h2>
 
             </div>
 
             <div className='energy' >
-            <h1 style={{margin:'20vh 0 0 0' , color:'#6455d7'}}>The Energy of the structure:</h1>
+            <h1>Component Structure</h1>
             <div className='lottie_flame'>
                 <ControlledLottie animationData={flame}> </ControlledLottie>
               </div>
               
-              <h2 style={{margin:'5vh 0 0 0', color:'#6455d7'}}>{info.Energy}</h2>
+
               <div>
                 <a href={format('https://materialsproject.org/materials?formula={0}',info.Formula)} height={'30%'} title={'MP Structure'}> View MP-structure at MP web</a>
               </div>
@@ -68,6 +79,7 @@ export const UUIDDetail = () => {
             </div>
 
             <div className='cell'>
+              <h1>Process Map</h1>
               <ModalImage 
               small={img_url}
               large={img_url}

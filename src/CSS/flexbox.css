@@ -109,3 +109,63 @@
     flex-wrap: wrap;
     
   }
+
+
+  .formula {grid-area: f;}
+  .time {grid-area: i;}
+  .user{grid-area: u;}
+  .energy{grid-area: e;}
+  .type{grid-area: t;}
+  .cell{grid-area: c;}
+  .molecule_count{grid-area: m;}
+  .spacegroup{grid-area: s;}
+
+  .UUID_info{
+  
+    display: grid;
+    
+    grid-template-areas:
+    'i i i i m m m t'
+    'e e f f f f f u'
+    'e e f f f f f u'
+    'e e f f f f f s'
+    'c c c c c c c c'
+    ;
+    width: 95%;
+    height: 88%;
+    gap: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 5%;
+  }
+  
+  .UUID_info > div{
+    position: relative;
+    font-family: 'Luckiest Guy';
+    text-align: center;
+    font-weight: bolder;
+    font-size: 5vh;
+    padding: 4%;
+    justify-items: center;
+    border-radius: 3vh;
+    background: #aeccff;
+    box-shadow:  0.3vw 0.3vw 0.6vw  #7fa4e3,
+    -0.3vw -0.3vw 0.6vw #9fccff;
+  }
+  
+  .UUID_info > div >h1{
+    margin: 0;
+    font-family: 'Lora';
+    text-align: center;
+    font-size: 5vh;
+    color: #2671fb;
+    font-weight: bold;
+  }
+  
+  .UUID_info > div >h2{
+    margin: 2vh 0 0 0;
+    font-family: 'Luckiest Guy';
+    text-align: center;
+    font-size: 6vh;
+    font-weight: bolder;
+  }
