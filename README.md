@@ -68,3 +68,24 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### React Package Dependency 
+1. @testing-library/jest-dom@5.16.4
+2. @testing-library/react@13.3.0
+3. @testing-library/user-event@13.5.0
+4. chart.js@3.8.2
+5. font-awesome@4.7.0
+6. framer-motion@6.5.1
+7. react-chartjs-2@4.3.1
+8. react-dom@18.2.0
+9. react-hover@3.0.1
+10. react-inputs-validation@4.9.5
+11. react-lottie@1.2.3
+12. react-modal-image@2.5.0
+13. react-modal@3.15.1
+14. react-scripts@5.0.1
+15. react-spring@9.5.2
+16. react-string-format@1.0.1
+17. react@18.2.0
+18. styled-components@5.3.5
+19. web-vitals@2.1.4
