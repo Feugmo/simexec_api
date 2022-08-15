@@ -17,7 +17,7 @@ import {
     Tooltip,
     Legend
   );
-  const labels = ['Kill','Finished','Create'];
+
   export const options = {
     responsive: true,
     maintainAspectRatio: false,
@@ -36,11 +36,11 @@ import {
     <Bar options={options} 
 
     data={{
-        labels, 
+        labels:P_data.Status, 
         datasets:[
             {
                 label: "Process Type",
-                data: P_data.data_num,
+                data: P_data.Status_num,
                 backgroundColor: 'rgba(255, 99, 132, 0.5)',
             }
         ]

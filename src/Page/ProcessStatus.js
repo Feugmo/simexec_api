@@ -20,9 +20,11 @@ export const ProcessStatus = () => {
     }
 
     const [ctp,setCtp]=useState([]);
+    const [user, setUser]=useState([]);
+    const [pstatus,setPstatus]=useState([]);
     const [isc,setIsc]=useState(false)
     const [ProcessData,setProcessData]=useState('[{"Time":"None","Cal_Type":"None","Status":"None","UUID":"None"}]')
-    const [ProcessNum,setProcessNum]=useState('{"data_num":[1,1,1],"Types":["None"]}')
+    const [ProcessNum,setProcessNum]=useState('{"Status": ["FINISHED", "WAITING", "KILLED", "EXCEPTED", "CREATED"],"Status_num": [21, 4, 3, 1, 8],"Types":["None"],"User":["None"]}')
     const fetch_res = async ()=>{
         const response = await fetch("http://localhost:8001/get/process")
         const structure_data = await response.json()
@@ -40,7 +42,34 @@ export const ProcessStatus = () => {
     //     setCtp(newList)
     //     console.log(ctp)
     //   }
+    const onChangeUeser = id =>{
+        const findID=user.indexOf(JSON.parse(ProcessNum).User[id])
+        if (findID > -1) {
+            user.splice(findID, 1);
+  
+          } else {
+            user.push(JSON.parse(ProcessNum).User[id]);
+          }
+  
+          setIsc(false)
+          setUser(user);
+    }
+
+    const onChangeStatus = id =>{
+        const findID=pstatus.indexOf(JSON.parse(ProcessNum).Status[id])
+        if (findID > -1) {
+            pstatus.splice(findID, 1);
+  
+          } else {
+            pstatus.push(JSON.parse(ProcessNum).Status[id]);
+          }
+  
+          setIsc(false)
+          setPstatus(pstatus);
+    }
+
     
+
     const onChange = id => {
         
     
@@ -62,9 +91,19 @@ export const ProcessStatus = () => {
     
 
     const clear_filter=() =>{
+        ctp.length<1?(
+            setCtp(JSON.parse(ProcessNum).Types)
+        ):(setCtp(ctp))
 
-        setCtp(ctp)
+        user.length<1?(
+            setUser(JSON.parse(ProcessNum).User)
+        ):(setUser(user))
         setIsc(true)
+
+        pstatus.length<1?(
+            setPstatus(JSON.parse(ProcessNum).Status)):
+            (setPstatus(setPstatus))
+        
     }
 
 
@@ -84,9 +123,14 @@ export const ProcessStatus = () => {
                 </div>
                 <div className='Cal_type_Filter_Cont'>
                     {JSON.parse(ProcessNum).Types.map((tp,idx)=>(
-                        <p>{tp}<input type='checkbox' value={tp} name="filter" key={idx} onChange={()=> onChange(idx)} selected={ctp.includes(tp)}/></p>
-                        
+                        <p>{tp}<input type='checkbox' value={tp} name="filter_type" key={idx} onChange={()=> onChange(idx)} selected={ctp.includes(tp)}/></p>
+                    ))}
+                    {JSON.parse(ProcessNum).User.map((tp,idx)=>(
+                        <p>{tp}<input type='checkbox' value={tp} name="filter_user" key={idx} onChange={()=> onChangeUeser(idx)} selected={user.includes(tp)}/></p>
+                    ))}
 
+                    {JSON.parse(ProcessNum).Status.map((tp,idx)=>(
+                        <p>{tp}<input type='checkbox' value={tp} name="filter_status" key={idx} onChange={()=> onChangeStatus(idx)} selected={pstatus.includes(tp)}/></p>
                     ))}
                 </div>
                 
@@ -95,7 +139,7 @@ export const ProcessStatus = () => {
                 </div>
             </div>
             <div className='Query_box2_L1'>
-                {isc && <ShowProcess Process_data={JSON.parse(ProcessData)} filter={ctp}></ShowProcess>}
+                {isc && <ShowProcess Process_data={JSON.parse(ProcessData)} filter_type={ctp} filter_user={user} filter_status={pstatus}></ShowProcess>}
             </div>
         </div>
 

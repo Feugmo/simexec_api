@@ -30,6 +30,8 @@ const test_page= () => {
   
   navigate('/test')
 }
+
+
     
     
   return (
@@ -38,6 +40,11 @@ const test_page= () => {
         <div className='Nav_bar_bx0'>
             <p className='logo-font'>AQI</p>
         </div>
+
+          <button className='Nav_bar_menu'>
+            
+            <i className="fa-solid fa-bars-sort"></i>Menu</button>
+
         <div className='Nav_bar_bx1'>
           <button className='button_Nav'onClick={process_status}>Status</button>
         </div>
