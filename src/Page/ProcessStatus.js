@@ -3,12 +3,17 @@ import { ShowProcess } from '../componet/ShowProcess'
 import '../CSS/App.css'
 import '../CSS/flexbox.css'
 import '../CSS/Button.css'
-import { useState, useEffect } from 'react'
+import {  useEffect } from 'react'
 import NavBar from '../componet/NavBar'
 import { motion } from 'framer-motion'
 import { ProcessChart } from '../componet/charts/ProcessChart'
-
+import { StatusComp } from '../componet/QueryComponent/StatusComp'
 export const ProcessStatus = () => {
+
+    const {
+        state:{ctp,user,pstatus,ProcessData,ProcessNum,isc,setCtp,setIsc,setUser,setPstatus},
+        onChange,onChangeStatus,onChangeUeser,fetch_res
+    } = StatusComp()
 
     const buttonV={
         hover:{
@@ -18,78 +23,6 @@ export const ProcessStatus = () => {
             }
         }
     }
-
-    const [ctp,setCtp]=useState([]);
-    const [user, setUser]=useState([]);
-    const [pstatus,setPstatus]=useState([]);
-    const [isc,setIsc]=useState(false)
-    const [ProcessData,setProcessData]=useState('[{"Time":"None","Cal_Type":"None","Status":"None","UUID":"None"}]')
-    const [ProcessNum,setProcessNum]=useState('{"Status": ["FINISHED", "WAITING", "KILLED", "EXCEPTED", "CREATED"],"Status_num": [21, 4, 3, 1, 8],"Types":["None"],"User":["None"]}')
-    const fetch_res = async ()=>{
-        const response = await fetch("http://localhost:8001/get/process")
-        const structure_data = await response.json()
-        setProcessData(structure_data)
-        const responses = await fetch("http://localhost:8001/get/process/num")
-        const p_num = await responses.json()
-        setProcessNum(p_num)
-    }
-    useEffect(()=>{
-         fetch_res()
-    })
-    
-    // const onChangeValue = e => {
-    //     const newList =ctp.concat( [e.target.value] );
-    //     setCtp(newList)
-    //     console.log(ctp)
-    //   }
-    const onChangeUeser = id =>{
-        const findID=user.indexOf(JSON.parse(ProcessNum).User[id])
-        if (findID > -1) {
-            user.splice(findID, 1);
-  
-          } else {
-            user.push(JSON.parse(ProcessNum).User[id]);
-          }
-  
-          setIsc(false)
-          setUser(user);
-    }
-
-    const onChangeStatus = id =>{
-        const findID=pstatus.indexOf(JSON.parse(ProcessNum).Status[id])
-        if (findID > -1) {
-            pstatus.splice(findID, 1);
-  
-          } else {
-            pstatus.push(JSON.parse(ProcessNum).Status[id]);
-          }
-  
-          setIsc(false)
-          setPstatus(pstatus);
-    }
-
-    
-
-    const onChange = id => {
-        
-    
-        // Find index
-        const findIdx = ctp.indexOf(JSON.parse(ProcessNum).Types[id]);
-    
-        // Index > -1 means that the item exists and that the checkbox is checked
-        // and in that case we want to remove it from the array and uncheck it
-        if (findIdx > -1) {
-          ctp.splice(findIdx, 1);
-
-        } else {
-          ctp.push(JSON.parse(ProcessNum).Types[id]);
-        }
-
-        setIsc(false)
-        setCtp(ctp);
-      };
-    
-
     const clear_filter=() =>{
         ctp.length<1?(
             setCtp(JSON.parse(ProcessNum).Types)
@@ -103,8 +36,27 @@ export const ProcessStatus = () => {
         pstatus.length<1?(
             setPstatus(JSON.parse(ProcessNum).Status)):
             (setPstatus(setPstatus))
-        
+        // setPstatus(pstatus)
+        // setUser(user)
+        // setCtp(ctp)
+        // setIsc(true)
+        console.log(pstatus)
+        console.log(user)
+        console.log(ctp)        
     }
+
+    
+    useEffect(()=>{
+         fetch_res()
+    })
+    
+    // const onChangeValue = e => {
+    //     const newList =ctp.concat( [e.target.value] );
+    //     setCtp(newList)
+    //     console.log(ctp)
+    //   }
+   
+   
 
 
   
@@ -121,17 +73,31 @@ export const ProcessStatus = () => {
                 <div className='Query_box3_L2'>
                     <ProcessChart P_data={JSON.parse(ProcessNum)}></ProcessChart>
                 </div>
-                <div className='Cal_type_Filter_Cont'>
-                    {JSON.parse(ProcessNum).Types.map((tp,idx)=>(
-                        <p>{tp}<input type='checkbox' value={tp} name="filter_type" key={idx} onChange={()=> onChange(idx)} selected={ctp.includes(tp)}/></p>
-                    ))}
-                    {JSON.parse(ProcessNum).User.map((tp,idx)=>(
-                        <p>{tp}<input type='checkbox' value={tp} name="filter_user" key={idx} onChange={()=> onChangeUeser(idx)} selected={user.includes(tp)}/></p>
-                    ))}
+                <div className='Cal_type_Filter'>
 
-                    {JSON.parse(ProcessNum).Status.map((tp,idx)=>(
-                        <p>{tp}<input type='checkbox' value={tp} name="filter_status" key={idx} onChange={()=> onChangeStatus(idx)} selected={pstatus.includes(tp)}/></p>
+                    <div>
+                        <h1>Calculation Type</h1>
+                        {JSON.parse(ProcessNum).Types.map((tp,idx)=>(
+                        <p>{tp}   <input  type='checkbox' value={tp} name="filter_type" key={idx+"Type"} onChange={()=> onChange(idx)} /></p>
                     ))}
+                    </div>
+                    <div>
+                        <h1>Calculation Status</h1>
+                    {JSON.parse(ProcessNum).Status.map((tp,idx)=>(
+                        <p>{tp}   <input type='checkbox' value={tp} name="filter_status" key={idx+"Status"} onChange={()=> onChangeStatus(idx)}/></p>
+                    ))}
+                    </div>
+                    <div>
+                        <h1>User</h1>
+                    {JSON.parse(ProcessNum).User.map((tp,idx)=>(
+                        <p>{tp}   <input type='checkbox' value={tp} name="filter_user" key={idx+"User"} onChange={()=> onChangeUeser(idx)}/></p>
+                    ))}
+                    </div>
+
+                    
+                    
+
+                    
                 </div>
                 
                 <div className='Query_box2_L2'>

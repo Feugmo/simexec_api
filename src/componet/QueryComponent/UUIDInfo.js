@@ -1,5 +1,5 @@
 import React from 'react'
-import { UUIDDetail } from '../UUIDDetail';
+import { UUIDDetail } from '../GeneralMain';
 import {Routes, Route, useNavigate} from 'react-router-dom';
 import { format } from 'react-string-format';
 export const UUIDInfo = ({node,type_cal}) => {

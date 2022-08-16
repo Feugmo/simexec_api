@@ -3,18 +3,15 @@ import '../CSS/App.css'
 import '../CSS/flexbox.css'
 import '../CSS/Button.css'
 import ModalImage from "react-modal-image";
-import NavBar from './NavBar'
-import ControlledLottie from './lottie/Flame'
-import { useLocation } from 'react-router-dom'
-import * as flame from './lottie/Flame.json'
-import * as atom from  './lottie/atom.json'
-import { format } from 'react-string-format'
-export const UUIDDetail = () => {
+import NavBar from '../NavBar'
+import ControlledLottie from '../lottie/Flame'
 
-  const {state} = useLocation();
-  
-  const {id,cal_node} = state;
-  const uuid=cal_node
+import * as flame from '../lottie/Flame.json'
+import * as atom from  '../lottie/atom.json'
+import { format } from 'react-string-format'
+export const UUIDDetail = (id,uuid) => {
+
+
   const img_url=format('http://localhost:8001/get/UUID/cal_graph_pic/{0}',uuid)
   const info=JSON.parse(id);
 
@@ -24,7 +21,8 @@ export const UUIDDetail = () => {
   return (
     <>
         <NavBar></NavBar>
-        <div className='UUID_info'>
+
+          <div className='UUID_info'>
             <div className='formula' style={{fontSize:'20vh', color:'#0055d7'}}>
             <div className='lottie_flame' style={{left:'40%', height:'65%'}}>
                 <ControlledLottie animationData={atom}> </ControlledLottie>
@@ -95,7 +93,9 @@ export const UUIDDetail = () => {
             
             
           </div>
-    
+
+
+        
     </>
   )
 }
