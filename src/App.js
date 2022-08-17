@@ -6,7 +6,7 @@ import { Query } from './Page/ElementQuery';
 import { ProcessStatus } from './Page/ProcessStatus';
 import { TestPage } from './Page/TestPage';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import { UUIDDetail } from './componet/UUIDDetail';
+import { GenInfo } from './Page/UUID_Slide';
 function App() {
 
 
@@ -20,7 +20,7 @@ function App() {
               <Route path='/query/energy/*' element={<EnergyQuery/>} />
               <Route path='/query/get_process/*' element={<ProcessStatus/>} />
               <Route path='/test' element={<TestPage/>} />
-              <Route path='/query/UUID/detail' element={<UUIDDetail/>} />
+              <Route path='/query/UUID/detail/*' element={<GenInfo/>} />
           </Routes>
       </div>
     </Router>
