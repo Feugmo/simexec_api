@@ -11,8 +11,8 @@
 
 @media screen and (min-width: 1300px) {
   body {
-    margin-left: 8%;
-    margin-right: 8%;
+    margin-left: 2%;
+    margin-right: 2%;
     background: #f0f5ff;
     font-family: 'Inter', sans-serif;
     align-items: center;
@@ -100,14 +100,13 @@ h2.common {
 
 
 .dataTable {
-  margin-left: 2vw;
   width: 100%;
   background: #d6e1f5;
   box-shadow:   0.7vw 0.7vw 0.7vw #b6bfd0,
   -0.7vw -0.7vw 0.7vw #f6ffff;
 
   border-radius: 3.5vh;
-  margin-top: 8vh;
+  margin-top: 2vh;
   
 }
 

@@ -78,19 +78,19 @@ export const ProcessStatus = () => {
                     <div>
                         <h1>Calculation Type</h1>
                         {JSON.parse(ProcessNum).Types.map((tp,idx)=>(
-                        <p>{tp}   <input  type='checkbox' value={tp} name="filter_type" key={idx+"Type"} onChange={()=> onChange(idx)} /></p>
+                        <p key={idx+"TypeP"}>{tp}   <input  type='checkbox' value={tp} name="filter_type" key={idx+"Type"} onChange={()=> onChange(idx)} /></p>
                     ))}
                     </div>
                     <div>
                         <h1>Calculation Status</h1>
                     {JSON.parse(ProcessNum).Status.map((tp,idx)=>(
-                        <p>{tp}   <input type='checkbox' value={tp} name="filter_status" key={idx+"Status"} onChange={()=> onChangeStatus(idx)}/></p>
+                        <p key={idx+"StaP"}>{tp}   <input type='checkbox' value={tp} name="filter_status" key={idx+"Status"} onChange={()=> onChangeStatus(idx)}/></p>
                     ))}
                     </div>
                     <div>
                         <h1>User</h1>
                     {JSON.parse(ProcessNum).User.map((tp,idx)=>(
-                        <p>{tp}   <input type='checkbox' value={tp} name="filter_user" key={idx+"User"} onChange={()=> onChangeUeser(idx)}/></p>
+                        <p key={idx+"UserP"}>{tp}   <input type='checkbox' value={tp} name="filter_user" key={idx+"User"} onChange={()=> onChangeUeser(idx)}/></p>
                     ))}
                     </div>
 

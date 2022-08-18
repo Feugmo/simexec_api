@@ -31,11 +31,11 @@ export const StructureInfo = ({info,fa}) => {
             </div>
 
             <div className='structurePic'>
-                <img src='https://www.nottingham.ac.uk/PressReleaseLongForm-Images/Science/Atompic.x2537f9a6.jpg' alt='Atom' width={'85%'} height={'85%'}/>
+                <img src='https://www.nottingham.ac.uk/PressReleaseLongForm-Images/Science/Atompic.x2537f9a6.jpg' alt='Atom' width={'95%'} height={'105%'}/>
             </div>
 
             <div className='molecule_count'>
-              <h1>Total Molecule Count</h1>
+              <h1>Number of atoms</h1>
               <h2>{info.Molecules}</h2>
             </div>
 

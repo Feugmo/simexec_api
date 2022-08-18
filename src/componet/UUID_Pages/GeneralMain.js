@@ -21,7 +21,7 @@ export const UUIDDetail = ({info,uuid,fa}) => {
         
 
           <div className='UUID_Gen'>
-            <div className='formula' style={{fontSize:'20vh', color:'#0055d7', padding:'0 0 0 2vh'}}>
+            <div className='formula' style={{fontSize:'22vh', color:'#0055d7', padding:'3vh 0 0 2vh'}}>
             <div className='lottie_flame' style={{left:'40%', height:'65%'}}>
                 <ControlledLottie animationData={atom}> </ControlledLottie>
               </div>
@@ -40,7 +40,7 @@ export const UUIDDetail = ({info,uuid,fa}) => {
            
 
             <div className='user'>
-              <h1 style={{margin:'3.5vh 0 0 0', color:'#3c55d7'}}>Computer: </h1>
+              <h1 style={{margin:'0.5vh 0 0 0', color:'#3c55d7'}}>Computer: </h1>
               <h2 style={{color:'#3c55d7', fontSize:'3.5vh'}}>{info.Computer}</h2>
 
             </div>

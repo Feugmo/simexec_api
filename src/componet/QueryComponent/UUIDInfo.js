@@ -8,7 +8,6 @@ export const UUIDInfo = ({node,type_cal}) => {
       const response = await fetch(format('http://localhost:8001/get/UUID/{0}',node))
       const uuI=await response.json()
       navigate('/query/UUID/detail', {state:{id:uuI , cal_node:node}}) 
-      console.log(JSON.parse(uuI).Formula)
   }
   
   return (
