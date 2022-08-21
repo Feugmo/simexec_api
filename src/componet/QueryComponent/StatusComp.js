@@ -7,8 +7,8 @@ export const StatusComp = () => {
     const [ctp,setCtp]=useState([]);
     const [user, setUser]=useState([]);
     const [pstatus,setPstatus]=useState([]);
-    const [ProcessData,setProcessData]=useState('[{"Time":"None","Cal_Type":"None","Status":"None","UUID":"None"}]')
-    const [ProcessNum,setProcessNum]=useState('{"Status": ["FINISHED", "WAITING", "KILLED", "EXCEPTED", "CREATED"],"Status_num": [21, 4, 3, 1, 8],"Types":["None"],"User":["None"]}')
+    const [ProcessData,setProcessData]=useState('[{"Cal_Type": "vasp.vasp", "Time": "08/10/22 21:10", "Status": "FINISHED", "Computer": "graham (graham.computecanada.ca)", "UUID": "ee348e16-dd33-48d5-b124-d99c12f8da49"},{"Cal_Type": "lammps.force", "Time": "07/11/22 13:31", "Status": "FINISHED", "Computer": "localhost (localhost)", "UUID": "59326602-dd21-49fc-b37a-df1b98476801"},{"Cal_Type": "lammps.optimize", "Time": "06/29/22 19:59", "Status": "CREATED", "Computer": "localhost (localhost)", "UUID": "a2675677-9b0e-495e-bc18-92ef1681e5c7"}]')
+    const [ProcessNum,setProcessNum]=useState('{"Status": ["FINISHED", "WAITING", "KILLED", "EXCEPTED", "CREATED"],"Status_num": [21, 4, 3, 1, 8],"Types":["lammps.optimize","vasp.vasp","lammps.force"],"User":["graham (graham.computecanada.ca)","localhost"]}')
     const fetch_res = async ()=>{
         const response = await fetch("http://localhost:8001/get/process")
         const structure_data = await response.json()

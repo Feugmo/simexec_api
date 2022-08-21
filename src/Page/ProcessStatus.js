@@ -55,7 +55,11 @@ export const ProcessStatus = () => {
 
     
     useEffect(()=>{
-         fetch_res()
+    setTimeout(() => {
+        fetch_res()
+            
+        }, 2000);
+         
          
     })
     

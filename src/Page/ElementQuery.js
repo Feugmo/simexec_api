@@ -33,7 +33,9 @@ const {
               <input placeholder='Element' className={!validate?"inputNeum":"inputNeumError"}  type='text' value={element} onChange={update_elemnt}></input>
             </div>
             <div className='Query_box2_L2'>
-              <button className='buttonQuery' onClick={()=> fetch_res(element)}>Fetch Data</button>
+              <button className='buttonQuery' onClick={()=> setTimeout(() => {fetch_res(element)
+                
+              }, 2000) }>Fetch Data</button>
               {!validate && <p>Please Check Your Input and backend status {validate}</p>}
           </div> 
           {validate && 
