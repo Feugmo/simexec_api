@@ -30,7 +30,7 @@ const {
               <h2 className='common'>Query on Element</h2>   
             </div>
             <div className='Query_box1_L2'>
-              <input placeholder='Elment' className={!validate?"inputNeum":"inputNeumError"}  type='text' value={element} onChange={update_elemnt}></input>
+              <input placeholder='Element' className={!validate?"inputNeum":"inputNeumError"}  type='text' value={element} onChange={update_elemnt}></input>
             </div>
             <div className='Query_box2_L2'>
               <button className='buttonQuery' onClick={()=> fetch_res(element)}>Fetch Data</button>
