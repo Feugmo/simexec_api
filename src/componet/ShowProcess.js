@@ -20,7 +20,7 @@ export const ShowProcess = ({Process_data, filter_type, filter_user, filter_stat
             {Process_data.map((pd,idx)=>(
 
               
-                  filter_type.includes(pd.Cal_Type) && filter_user.includes(pd.Computer) && filter_status.includes(pd.Status) ? (
+                filter_type.includes(pd.Cal_Type) && filter_user.includes(pd.Computer) && filter_status.includes(pd.Status) ? (
                     <tr key={idx}>
                     <td key={idx+"time"}>{pd.Time}</td>
                     <td key={idx+"type"}>{pd.Cal_Type}</td>

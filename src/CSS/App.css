@@ -105,7 +105,7 @@ h2.common {
   box-shadow:   0.7vw 0.7vw 0.7vw #b6bfd0,
   -0.7vw -0.7vw 0.7vw #f6ffff;
 
-  border-radius: 3.5vh;
+  border-radius: 2.5vh;
   margin-top: 2vh;
   
 }
@@ -128,17 +128,17 @@ h2.common {
 }
 
 .dataTable thead th:first-child {
-  border-top-left-radius: 3.5vh;
+  border-top-left-radius: 2.5vh;
 }
 .dataTable thead th:last-child {
-  border-top-right-radius: 3.5vh;
+  border-top-right-radius: 2.5vh;
 }
 .dataTable tr:last-child td:first-child {
-  border-bottom-left-radius: 3.5vh;
+  border-bottom-left-radius: 2.5vh;
 }
 
 .dataTable tr:last-child td:last-child {
-  border-bottom-right-radius: 3.5vh;
+  border-bottom-right-radius: 2.5vh;
 }
 
 .dataTable  tr:nth-of-type(odd){
@@ -164,7 +164,7 @@ h2.common {
   align-items: center;
   padding: 2.3%;
   margin-left: 3vw;
-  margin-bottom: 1vw;
+  margin-bottom: 4vh;
   font-size: 3vw;
   border: none;
   border-radius: 18px;

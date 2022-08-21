@@ -79,10 +79,10 @@
     justify-content: space-between;
     flex-direction: column;
     display: flex;
-    margin: 1%;
-    padding: 2%;
-    border-radius: 3%;
-    background: #f0f5ff;
+    margin: 2% 2% 2% 0;
+    padding: 0 2% 8% 1%;
+    border-radius: 5%;
+    background: #e9f1ff;
     box-shadow:  0.4vw 0.4vw 1.2vw #ccd0d9,
     -0.4vw -0.4vw 1.2vw #ffffff;
 

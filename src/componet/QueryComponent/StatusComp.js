@@ -2,10 +2,11 @@ import { useState } from 'react'
 
 
 export const StatusComp = () => {
+    
+    const [isc,setIsc]=useState(false)
     const [ctp,setCtp]=useState([]);
     const [user, setUser]=useState([]);
     const [pstatus,setPstatus]=useState([]);
-    const [isc,setIsc]=useState(false)
     const [ProcessData,setProcessData]=useState('[{"Time":"None","Cal_Type":"None","Status":"None","UUID":"None"}]')
     const [ProcessNum,setProcessNum]=useState('{"Status": ["FINISHED", "WAITING", "KILLED", "EXCEPTED", "CREATED"],"Status_num": [21, 4, 3, 1, 8],"Types":["None"],"User":["None"]}')
     const fetch_res = async ()=>{
@@ -15,7 +16,13 @@ export const StatusComp = () => {
         const responses = await fetch("http://localhost:8001/get/process/num")
         const p_num = await responses.json()
         setProcessNum(p_num)
+        // setCtp(JSON.parse(ProcessNum).Types)
+        // setUser(JSON.parse(ProcessNum).User)
+        // setPstatus(JSON.parse(ProcessNum).Status)
+
+        
     }
+    
     const onChangeUeser = id =>{
         const findID=user.indexOf(JSON.parse(ProcessNum).User[id])
         if (findID > -1) {
@@ -24,6 +31,7 @@ export const StatusComp = () => {
           } else {
             user.push(JSON.parse(ProcessNum).User[id]);
           }
+          console.log(user)
   
           setIsc(false)
           setUser(user);
@@ -39,6 +47,7 @@ export const StatusComp = () => {
 
             pstatus.push(JSON.parse(ProcessNum).Status[id]);
           }
+          console.log(pstatus)
 
           setIsc(false)
           setPstatus(pstatus);
@@ -62,6 +71,7 @@ export const StatusComp = () => {
         }
 
         setIsc(false)
+        console.log(ctp)
         setCtp(ctp);
       };
       

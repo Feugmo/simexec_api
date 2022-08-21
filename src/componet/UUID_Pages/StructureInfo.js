@@ -31,7 +31,7 @@ export const StructureInfo = ({info,fa}) => {
             </div>
 
             <div className='structurePic'>
-                <img src='https://www.nottingham.ac.uk/PressReleaseLongForm-Images/Science/Atompic.x2537f9a6.jpg' alt='Atom' width={'95%'} height={'105%'}/>
+                <li><a href='https://materialsproject.org/api'><img src='https://www.nottingham.ac.uk/PressReleaseLongForm-Images/Science/Atompic.x2537f9a6.jpg' alt='Atom' width={'95%'} height={'105%'}/> </a></li> 
             </div>
 
             <div className='molecule_count'>

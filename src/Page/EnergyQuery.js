@@ -31,11 +31,12 @@ export const EnergyQuery = () => {
       <h2 className='common'>Query on Energy</h2>   
     </div>
       <div className='Query_box1_L2'>
-        <input className="inputNeum" type='text' value={e_min} onChange={update_elemnt_min}></input>
+        <input className="inputNeum" type='text'  onChange={update_elemnt_min} placeholder="Lower Bondary"></input>
       </div>
       <div className='Query_box1_L2'>
-        <input className="inputNeum" type='text' value={e_max} onChange={update_elemnt_max}></input>
+        <input className="inputNeum" type='text'  onChange={update_elemnt_max} placeholder="Higher Bondary"></input>
       </div>
+      <p>Please enter the minimum/maximum energy you want to query in the column above respectively, if nothing input, then it will return all record</p>
         <div className='Query_box2_L2'>
       <button className='buttonQuery' onClick={()=> fetch_res(e_min,e_max)}>Fetch Data</button>
         </div>

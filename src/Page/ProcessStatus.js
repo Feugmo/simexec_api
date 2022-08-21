@@ -31,23 +31,32 @@ export const ProcessStatus = () => {
         user.length<1?(
             setUser(JSON.parse(ProcessNum).User)
         ):(setUser(user))
-        setIsc(true)
+        
 
         pstatus.length<1?(
             setPstatus(JSON.parse(ProcessNum).Status)):
             (setPstatus(setPstatus))
-        // setPstatus(pstatus)
-        // setUser(user)
-        // setCtp(ctp)
+        setIsc(true)
+
+
+
+
         // setIsc(true)
-        console.log(pstatus)
-        console.log(user)
-        console.log(ctp)        
+     
+    }
+    const resetF=()=>{
+
+            
+            setCtp([])
+            setPstatus([])
+            setUser([])
+
     }
 
     
     useEffect(()=>{
          fetch_res()
+         
     })
     
     // const onChangeValue = e => {
@@ -102,7 +111,9 @@ export const ProcessStatus = () => {
                 
                 <div className='Query_box2_L2'>
                     <motion.button variants={buttonV} whileHover="hover" className='buttonQuery' onClick={clear_filter} >Fetch Process Status</motion.button>
+                    <button className='buttonQuery' onClick={resetF}>Clear</button>
                 </div>
+
             </div>
             <div className='Query_box2_L1'>
                 {isc && <ShowProcess Process_data={JSON.parse(ProcessData)} filter_type={ctp} filter_user={user} filter_status={pstatus}></ShowProcess>}
