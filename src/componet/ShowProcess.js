@@ -1,13 +1,27 @@
-import React from 'react'
+import React, { Component} from 'react';
 import { UUIDInfo } from '../componet/QueryComponent/UUIDInfo'
 
-export const ShowProcess = ({Process_data, filter_type, filter_user, filter_status}) => {
-  
-  return (
+export default class ShowProcess extends Component { 
+  constructor (props){
+    super(props);
+    this.state ={
+      Process_data:props.Process_data, filter_type:props.filter_type, filter_user:props.filter_user, filter_status:props.filter_status
+    }
+    
+  }
+
+  reverse_time =()=>{
+    this.setState(
+      {Process_data: this.props.Process_data.reverse()}
+    )
+    
+
+  }
+  render(){return (
     <table className='dataTable'>
         <thead>
             <tr>
-                <th key="processhead">Time</th>
+                <th key="processhead" ><button  onClick={this.reverse_time}>Time</button> </th>
                 <th key="Type">Cal_Type</th>
                 <th key="User">Computer</th>
                 <th key="Status">Status</th>
@@ -17,10 +31,10 @@ export const ShowProcess = ({Process_data, filter_type, filter_user, filter_stat
             </thead>
             <tbody>
             
-            {Process_data.map((pd,idx)=>(
+            {this.props.Process_data.map((pd,idx)=>(
 
               
-                filter_type.includes(pd.Cal_Type) && filter_user.includes(pd.Computer) && filter_status.includes(pd.Status) ? (
+                this.props.filter_type.includes(pd.Cal_Type) && this.props.filter_user.includes(pd.Computer) && this.props.filter_status.includes(pd.Status) ? (
                     <tr key={idx}>
                     <td key={idx+"time"}>{pd.Time}</td>
                     <td key={idx+"type"}>{pd.Cal_Type}</td>
@@ -39,5 +53,6 @@ export const ShowProcess = ({Process_data, filter_type, filter_user, filter_stat
        
 
     </table>
-  )
+  )}
+  
 }

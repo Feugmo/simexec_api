@@ -1,5 +1,5 @@
 import React from 'react'
-import { ShowProcess } from '../componet/ShowProcess'
+import  ShowProcess  from '../componet/ShowProcess'
 import '../CSS/App.css'
 import '../CSS/flexbox.css'
 import '../CSS/Button.css'

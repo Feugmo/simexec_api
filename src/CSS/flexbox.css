@@ -258,15 +258,16 @@
     font-family: 'Lora';
     text-align: center;
     font-size: 5vh;
-    color: #2671fb;
+    color: #4d4d4d;
     font-weight: bold;
   }
   
   .UUID_info > div >h2{
     margin: 2vh 0 0 0;
-    font-family: 'Luckiest Guy';
+    font-family: 'Lora';
     text-align: center;
     font-size: 6vh;
+    color: #4d4d4d;
     font-weight: bolder;
   }
 
@@ -300,7 +301,7 @@
 
   .UUID_Gen> div{
     position: relative;
-    font-family: 'Luckiest Guy';
+    font-family: 'Lora';
     text-align: center;
     font-weight: bolder;
     font-size: 5vh;
@@ -317,15 +318,16 @@
     font-family: 'Lora';
     text-align: center;
     font-size: 4.5vh;
-    color: #2671fb;
+    color: #4d4d4d;
     font-weight: bold;
   }
 
   .UUID_Gen >div >h2{
     margin: 1vh 0 0 0;
-    font-family: 'Luckiest Guy';
+    font-family: 'Lora';
     text-align: center;
     font-size: 5.5vh;
+    color: #4d4d4d;
     font-weight: bolder;
   }
 

@@ -21,7 +21,7 @@ export const UUIDDetail = ({info,uuid,fa}) => {
         
 
           <div className='UUID_Gen'>
-            <div className='formula' style={{fontSize:'22vh', color:'#0055d7', padding:'3vh 0 0 2vh'}}>
+            <div className='formula' style={{fontSize:'22vh',  padding:'8vh 2vw 2vw 2vw',background:"#e0f5ff"}}>
             <div className='lottie_flame' style={{left:'40%', height:'65%'}}>
                 <ControlledLottie animationData={atom}> </ControlledLottie>
               </div>
@@ -30,42 +30,42 @@ export const UUIDDetail = ({info,uuid,fa}) => {
 
             </div>
 
-            <div  className='Finishedtime'>
-              <h1 style={{color:'#1455d7'}}>Finished at: </h1>
-              <h2 style={{color:'#1455d7'}}>{info.Ftime }</h2>
+            <div  className='Finishedtime' style={{background:"#efecfe"}}>
+              <h1 >Finished at: </h1>
+              <h2 >{info.Ftime }</h2>
               
 
             </div>
 
            
 
-            <div className='user'>
-              <h1 style={{margin:'0.5vh 0 0 0', color:'#3c55d7'}}>Computer: </h1>
-              <h2 style={{color:'#3c55d7', fontSize:'3.5vh'}}>{info.Computer}</h2>
+            <div className='user'style={{background:"#e0fffb"}}>
+              <h1 style={{margin:'0.5vh 0 0 0'}}>Computer: </h1>
+              <h2 style={{fontSize:'3.5vh'}}>{info.Computer}</h2>
 
             </div>
 
             
 
-            <div className='Cal_type'>
-              <h1 style={{color:'#2855d7'}}>Type:</h1>
-              <h2 style={{color:'#2855d7'}}>{info.Cal_Type}</h2>
+            <div className='Cal_type'style={{background:"#e0fffb"}}>
+              <h1 >Type:</h1>
+              <h2 >{info.Cal_Type}</h2>
 
             </div>
 
-            <div className='WordDir'>
-              <h1 style={{color:'#2855d7'}}>Work Direction:</h1>
-              <h2 style={{color:'#2855d7', fontSize:'3.5vh'}}>{info.WorkDir}</h2>
+            <div className='WordDir' style={{background:"#e0f5ff"}}>
+              <h1 >Work Direction:</h1>
+              <h2 style={{fontSize:'3.5vh'}}>{info.WorkDir}</h2>
 
             </div>
 
-            <div className='StartT'>
-              <h1 style={{color:'#2855d7'}}>Start Time:</h1>
-              <h2 style={{color:'#2855d7'}}>{info.Time}</h2>
+            <div className='StartT' style={{background:"#efecfe"}}>
+              <h1 >Start Time:</h1>
+              <h2 >{info.Time}</h2>
 
             </div>
 
-            <div className='cell' style={{height:"60%", padding:"0.5px 0.5px 0.5px 0.5px"}}>
+            <div className='cell' style={{height:"60%", padding:"0.5px 0.5px 0.5px 0.5px",background:"#e0f5ff"}}>
               <h1 style={{margin:"0 0 0 0"}}>Process Map</h1>
               <ModalImage 
               className="small_preview"
