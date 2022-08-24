@@ -6,15 +6,16 @@ import '../CSS/Button.css'
 import NavBar from '../componet/NavBar';
 import { ShowDataTR } from '../componet/Show_data_Tb';
 export const EnergyQuery = () => {
-    const [e_min, setE_min]=useState(-Infinity)
-    const [e_max, setE_max]=useState(Infinity)
-    const [structures,setStrucutres]=useState('[{"Cell":"None","Formula":"NONE","Cal_Type":"None","Energy":"None","UUID":"None"}]')
-    const update_elemnt_min = e =>{
-        setE_min(e.target.value)
-      }
-      const update_elemnt_max = e =>{
-        setE_max(e.target.value)
-      }
+  const [structures,setStrucutres]=useState('[{"Cell":"None","Formula":"NONE","Cal_Type":"None","Energy":"None","UUID":"None"}]')  
+  // const [e_min, setE_min]=useState(-Infinity)
+  //   const [e_max, setE_max]=useState(Infinity)
+  
+  //   const update_elemnt_min = e =>{
+  //       setE_min(e.target.value)
+  //     }
+  //     const update_elemnt_max = e =>{
+  //       setE_max(e.target.value)
+  //     }
 
     const fetch_res = async (e_min,e_max)=>{
         const response = await fetch(format("http://localhost:8001/get/filtered/energy/{0}/{1}",e_min,e_max))
@@ -31,7 +32,7 @@ export const EnergyQuery = () => {
     <>
     <NavBar></NavBar>
 
-    <div className='Query_cont_L1'>
+    {/* <div className='Query_cont_L1'>
     
     <div className='Query_box1_L1'>
     <div className='Query_box1_L2'>
@@ -47,14 +48,14 @@ export const EnergyQuery = () => {
         <div className='Query_box2_L2'>
       <button className='buttonQuery' onClick={()=> fetch_res(e_min,e_max)}>Fetch Data</button>
         </div>
-      </div>
+      </div> */}
     
     
     
-        <div className='Query_box2_L1'>
-            <ShowDataTR SDs={JSON.parse(structures)}></ShowDataTR>
-    </div>
-    </div>
+
+        <ShowDataTR SDs={JSON.parse(structures)}></ShowDataTR>
+
+    {/* </div> */}
       </>
   )
   

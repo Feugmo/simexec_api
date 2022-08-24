@@ -48,13 +48,13 @@ export const UUIDDetail = ({info,uuid,fa}) => {
             
 
             <div className='Cal_type'style={{background:"#e0fffb"}}>
-              <h1 >Type:</h1>
+              <h1 >Calculation type:</h1>
               <h2 >{info.Cal_Type}</h2>
 
             </div>
 
             <div className='WordDir' style={{background:"#e0f5ff"}}>
-              <h1 >Work Direction:</h1>
+              <h1 >Remote folder Path:</h1>
               <h2 style={{fontSize:'3.5vh'}}>{info.WorkDir}</h2>
 
             </div>

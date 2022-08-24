@@ -23,7 +23,7 @@ export const GenInfo = () => {
         <StructureInfo info={JSON.parse(id).StructureInfo} fa={JSON.parse(id).Formula}></StructureInfo>
       </div>
       <div className="each-slide-effect">
-        <UUResult result_key={JSON.parse(id).Result_key}result_value={JSON.parse(id).Result_value}></UUResult>
+        <UUResult result_key={JSON.parse(id).Result_key}result_value={JSON.parse(id).Result_value} rlist={JSON.parse(id).Retrived_list}></UUResult>
       </div>
         
     </Zoom>

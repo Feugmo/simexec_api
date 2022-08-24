@@ -10,7 +10,7 @@ export const StructureInfo = ({info,fa}) => {
   return (
     <>
         <div className='UUID_info'>
-        <div className='formula' style={{fontSize:'20vh', padding:"2vw", background:"#e0fffb"}}>
+        <div className='formula' style={{fontSize:'13vh', padding:"2vw", background:"#e0fffb"}}>
             {/* <div className='lottie_flame' style={{left:'40%', height:'65%'}}>
                 <ControlledLottie animationData={atom}> </ControlledLottie>
               </div> */}
@@ -19,7 +19,7 @@ export const StructureInfo = ({info,fa}) => {
 
             </div>
 
-            <div className='density'style={{background:"#efecfe"}}>
+            {/* <div className='density'style={{background:"#efecfe"}}>
                 <h1>Desnity: </h1>
                 <h2>{info.Density} g·cm⁻³</h2>
 
@@ -29,7 +29,7 @@ export const StructureInfo = ({info,fa}) => {
                 <h1>Volume: </h1>
                 <h2>{info.Volume} Å³</h2>
 
-            </div>
+            </div> */}
 
             <div className='structurePic' style={{background:"#e0fffb"}}>
                 <img src='https://materialsproject.org/assets/images/home/mp_color.png' alt='Atom' width={'100%'} height={'105%'}/>
@@ -42,7 +42,7 @@ export const StructureInfo = ({info,fa}) => {
             </div>
 
             <div className='spacegroup' style={{background:"#e0f5ff"}}>
-              <h1>Space Group for the System</h1>
+              <h1>Space Group</h1>
               <h2>{info.space_group}</h2>
 
             </div>

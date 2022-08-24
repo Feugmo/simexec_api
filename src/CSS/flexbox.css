@@ -217,9 +217,9 @@
 
 
   .formula {grid-area: f;}
-  .density {grid-area: d;}
-  .Volume{grid-area: v;}
-  .structurePic{grid-area: p; display: flex; padding: 2.5%;}
+  /* .density {grid-area: d;}
+  .Volume{grid-area: v;} */
+  .structurePic{grid-area: p; display: flex; flex-direction: column; padding: 2.5%; height: 85vh; width: 45vw;}
   .molecule_count{grid-area: m;}
   .spacegroup{grid-area: s;}
 
@@ -227,9 +227,10 @@
     
     display: grid;
     grid-template-areas:
-    'd v f f'
-    'p p f f'
-    'p p s m'
+    'p p p f f'
+    'p p p f f'
+    'p p p m m'
+    'p p p s s'
     ;
     width: 95%;
     height: 92%;
