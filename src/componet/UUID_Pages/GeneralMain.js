@@ -2,11 +2,11 @@ import React from 'react'
 import '../../CSS/App.css'
 import '../../CSS/flexbox.css'
 import '../../CSS/Button.css'
-import ControlledLottie from '../../componet/lottie/Flame'
+//import ControlledLottie from '../../componet/lottie/Flame'
 
 // import * as flame from '../lottie/Flame.json'
 import ModalImage from "react-modal-image";
-import * as atom from  '../../componet/lottie/atom.json'
+// import * as atom from  '../../componet/lottie/atom.json'
 import { format } from 'react-string-format'
 export const UUIDDetail = ({info,uuid,fa}) => {
 
@@ -22,9 +22,9 @@ export const UUIDDetail = ({info,uuid,fa}) => {
 
           <div className='UUID_Gen'>
             <div className='formula' style={{fontSize:'22vh',  padding:'8vh 2vw 2vw 2vw',background:"#e0f5ff"}}>
-            <div className='lottie_flame' style={{left:'40%', height:'65%'}}>
+            {/* <div className='lottie_flame' style={{left:'40%', height:'65%'}}>
                 <ControlledLottie animationData={atom}> </ControlledLottie>
-              </div>
+              </div> */}
 
               {formula(fa)}
 

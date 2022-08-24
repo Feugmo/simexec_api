@@ -21,7 +21,7 @@ export default class ShowProcess extends Component {
     <table className='dataTable'>
         <thead>
             <tr>
-                <th key="processhead" ><button  onClick={this.reverse_time}>Time</button> </th>
+                <th key="processhead"><button  onClick={this.reverse_time} style={{opacity:"0.1", zIndex:"-1"}}>R</button>Time</th>
                 <th key="Type">Cal_Type</th>
                 <th key="User">Computer</th>
                 <th key="Status">Status</th>

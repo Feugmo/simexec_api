@@ -219,7 +219,7 @@
   .formula {grid-area: f;}
   .density {grid-area: d;}
   .Volume{grid-area: v;}
-  .structurePic{grid-area: p;}
+  .structurePic{grid-area: p; display: flex; padding: 2.5%;}
   .molecule_count{grid-area: m;}
   .spacegroup{grid-area: s;}
 
@@ -232,7 +232,7 @@
     'p p s m'
     ;
     width: 95%;
-    height: 88%;
+    height: 92%;
     gap: 3%;
     margin-left: 3%;
     margin-right: 3%;
@@ -264,7 +264,6 @@
   
   .UUID_info > div >h2{
     margin: 2vh 0 0 0;
-    font-family: 'Lora';
     text-align: center;
     font-size: 6vh;
     color: #4d4d4d;

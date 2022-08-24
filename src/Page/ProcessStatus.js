@@ -101,7 +101,7 @@ export const ProcessStatus = () => {
                     ))}
                     </div>
                     <div>
-                        <h1>User</h1>
+                        <h1>Computer</h1>
                     {JSON.parse(ProcessNum).User.map((tp,idx)=>(
                         <p key={idx+"UserP"}>{tp}   <input type='checkbox' value={tp} name="filter_user" key={idx+"User"} onChange={()=> onChangeUeser(idx)}/></p>
                     ))}

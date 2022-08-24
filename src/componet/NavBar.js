@@ -53,7 +53,7 @@ const test_page= () => {
         <div className='dropdown'><button className='dropbtn'>Query
           <div className="dropdown-content">
             <p onClick={query_element}>Query On Element</p>
-            <p onClick={query_energy}>Query On Energy</p>
+            <p onClick={query_energy}>Query On Property</p>
               </div>
           </button>
           </div>

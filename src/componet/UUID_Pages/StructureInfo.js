@@ -2,8 +2,8 @@ import React from 'react'
 import '../../CSS/App.css'
 import '../../CSS/flexbox.css'
 import '../../CSS/Button.css'
-import * as atom from  '../../componet/lottie/atom.json'
-import ControlledLottie from '../../componet/lottie/Flame'
+// import * as atom from  '../../componet/lottie/atom.json'
+// import ControlledLottie from '../../componet/lottie/Flame'
 import { format } from 'react-string-format'
 export const StructureInfo = ({info,fa}) => {
     const formula = (fm)=> fm.split(/(\d+)/).map((f,idx)=> idx%2 ? <sub key={idx}>{f}</sub> : f)
@@ -11,9 +11,9 @@ export const StructureInfo = ({info,fa}) => {
     <>
         <div className='UUID_info'>
         <div className='formula' style={{fontSize:'20vh', padding:"2vw", background:"#e0fffb"}}>
-            <div className='lottie_flame' style={{left:'40%', height:'65%'}}>
+            {/* <div className='lottie_flame' style={{left:'40%', height:'65%'}}>
                 <ControlledLottie animationData={atom}> </ControlledLottie>
-              </div>
+              </div> */}
 
               {formula(fa)}
 
@@ -32,7 +32,8 @@ export const StructureInfo = ({info,fa}) => {
             </div>
 
             <div className='structurePic' style={{background:"#e0fffb"}}>
-                <li><a href={format('https://materialsproject.org/materials?formula={0}',fa)}><img src='https://www.nottingham.ac.uk/PressReleaseLongForm-Images/Science/Atompic.x2537f9a6.jpg' alt='Atom' width={'95%'} height={'105%'}/></a></li> 
+                <img src='https://materialsproject.org/assets/images/home/mp_color.png' alt='Atom' width={'100%'} height={'105%'}/>
+                <a href={format('https://materialsproject.org/materials?formula={0}',fa)} style={{margin:"7% 0 0 2%", color:"black"}}>Click Me to View MP Structure</a>
             </div>
 
             <div className='molecule_count' style={{background:"#e0f5ff"}}>
