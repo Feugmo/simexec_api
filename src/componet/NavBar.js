@@ -2,7 +2,7 @@ import React from 'react'
 import '../CSS/App.css'
 import '../CSS/flexbox.css'
 import '../CSS/Button.css'
-import { ProcessStatus } from '../Page/ProcessStatus'
+import  {ProcessStatus}  from '../Page/ProcessStatus'
 import {Routes, Route} from 'react-router-dom';
 import { EnergyQuery } from '../Page/EnergyQuery';
 import { Query } from '../Page/ElementQuery';

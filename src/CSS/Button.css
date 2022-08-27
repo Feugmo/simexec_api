@@ -49,6 +49,9 @@
     cursor:pointer;
     border: none;
     border-radius: 0.5vh;
+    font-size: 3vh;
+    margin-top: 1%;
+    margin-bottom: 1.5%;
     background: linear-gradient(145deg, #b9d9ff, #9cb7e6);
     box-shadow:  0.12vw 0.12vw 0.24vw #93add9,
                   -0.12vw -0.12vw 0.24vw #c7e9ff;

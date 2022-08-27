@@ -5,7 +5,10 @@ export default class ShowProcess extends Component {
   constructor (props){
     super(props);
     this.state ={
-      Process_data:props.Process_data, filter_type:props.filter_type, filter_user:props.filter_user, filter_status:props.filter_status
+      Process_data:props.Process_data, 
+      filter_type:props.filter_type, 
+      filter_user:props.filter_user, 
+      filter_status:props.filter_status,
     }
     
   }
@@ -17,6 +20,14 @@ export default class ShowProcess extends Component {
     
 
   }
+
+  // componentDidMount(){
+  //   console.log(this.props.filter_status)
+  //   console.log(this.props.filter_type)
+  //   console.log(this.props.filter_user)
+  // }
+
+ 
   render(){return (
     <table className='dataTable'>
         <thead>

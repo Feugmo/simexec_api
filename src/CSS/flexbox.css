@@ -75,7 +75,7 @@
 
   .Query_box1_L1 {
     width: 43%;
-    height: 115%;
+    min-height: 95%;
     justify-content: space-between;
     flex-direction: column;
     display: flex;
@@ -94,6 +94,16 @@
 
   .Query_box2_L1 {
     width: 55%;
+    height: 95%;
+    justify-content: space-between;
+    flex-direction: column;
+    display: flex;
+    margin: 2% 2% 2% 0;
+    padding: 2% 2% 8% 4%;
+    border-radius: 5%;
+    background: #e9f1ff;
+    box-shadow:  0.4vw 0.4vw 1.2vw #ccd0d9,
+    -0.4vw -0.4vw 1.2vw #ffffff;
     
     /* width: 30%; */
   }

@@ -100,26 +100,27 @@ h2.common {
 
 
 .dataTable {
+  
   width: 100%;
   background: #d6e1f5;
   box-shadow:   0.7vw 0.7vw 0.7vw #b6bfd0,
   -0.7vw -0.7vw 0.7vw #f6ffff;
 
-  border-radius: 2.5vh;
+  border-radius: 2vh;
   margin-top: 2vh;
   
 }
 
 .dataTable thead{
-  border-radius: 2.5vh;
+  border-radius: 2vh;
 }
 
 .dataTable th{
   border-collapse: collapse;
-  padding: 1.5%;
+  padding: 1.3%;
   background-color: #c3d5f3;
 
-  margin: 1.5%;
+  margin: 1.3%;
   color: rgb(104, 104, 104);
   font-size: 3.3vh;
   font-family: 'Lora';
@@ -128,17 +129,17 @@ h2.common {
 }
 
 .dataTable thead th:first-child {
-  border-top-left-radius: 2.5vh;
+  border-top-left-radius: 2vh;
 }
 .dataTable thead th:last-child {
-  border-top-right-radius: 2.5vh;
+  border-top-right-radius: 2vh;
 }
 .dataTable tr:last-child td:first-child {
-  border-bottom-left-radius: 2.5vh;
+  border-bottom-left-radius: 2vh;
 }
 
 .dataTable tr:last-child td:last-child {
-  border-bottom-right-radius: 2.5vh;
+  border-bottom-right-radius: 2vh;
 }
 
 .dataTable  tr:nth-of-type(odd){
@@ -146,10 +147,11 @@ h2.common {
 }
 .dataTable td{
 
-  font-size: 2vh;
-  padding-left: 1%;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  font-size: 2.4vh;
+  font-weight:600;
+  padding-left: 1.5%;
+  padding-top: 0.4%;
+  padding-bottom: 0.4%;
   justify-content: center;
   color: #6B6A69;
   

@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
-import { format } from 'react-string-format';
 import '../CSS/App.css'
 import '../CSS/Button.css'
 import NavBar from '../componet/NavBar';
@@ -18,7 +17,7 @@ export const EnergyQuery = () => {
   //     }
 
     const fetch_res = async (e_min,e_max)=>{
-        const response = await fetch(format("http://localhost:8001/get/filtered/energy/{0}/{1}",e_min,e_max))
+        const response = await fetch("http://localhost:8001/get/filtered/energy/")
         const structure_data = await response.json()
         setStrucutres(structure_data)}
       

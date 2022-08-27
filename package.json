@@ -52,6 +52,7 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.4",
+    "regenerator-runtime": "^0.13.9",
     "zdog": "^1.1.3"
   }
 }

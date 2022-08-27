@@ -62,7 +62,7 @@ export const Home = () => {
         Query On Element
       </motion.button>
       <motion.button className='buttonNeu' onClick={query_energy}>
-        Query On Energy
+        Query On Property
       </motion.button>
       </span>
     <Routes>
