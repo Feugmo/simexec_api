@@ -24,23 +24,19 @@ import {
     plugins: {
       id:"Process_type",
       
-      title: {
-        display: true,
-        text: 'Status Summary',
-      },
     },
   };
  
-  export const ProcessChart = ({P_data}) => {
+  export const ProcessChart = ({process_type_label,Process_type_value, title}) => {
   return (
     <Bar options={options} 
 
     data={{
-        labels:P_data.Status, 
+        labels:process_type_label, 
         datasets:[
             {
-                label: "Process Type",
-                data: P_data.Status_num,
+                label: title,
+                data: Process_type_value,
                 backgroundColor: 'rgba(255, 99, 132, 0.5)',
             }
         ]

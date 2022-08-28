@@ -54,24 +54,33 @@ export const ProcessStatus = () => {
         <div className='Query_cont_L1'>
             <div className='Query_box1_L1'>
                 <div className='Query_box1_L2'>
-                    <h2 className='common'>Show Process Status</h2>
+                    <h2 className='common'>Process Status Summary</h2>
                 </div>
+                <h4>Calculation Status Summary</h4>
                 
                 <div className='Query_box3_L2'>
-                    <ProcessChart P_data={JSON.parse(ProcessNum)}></ProcessChart>
+                    <ProcessChart process_type_label={JSON.parse(ProcessNum).Status} Process_type_value={JSON.parse(ProcessNum).Status_num} title={"Status Summary"} ></ProcessChart>
+                    
+                    
+                </div>
+                <h4>Computer Summary</h4>
+                <div className='Query_box3_L2'>
+                  <ProcessChart process_type_label={JSON.parse(ProcessNum).User} Process_type_value={JSON.parse(ProcessNum).User_num} title={"Computer Summary"}></ProcessChart>
+                </div>
+                <h4>Calculation Type Summary</h4>
+                <div className='Query_box3_L2'>
+                  <ProcessChart process_type_label={JSON.parse(ProcessNum).Types} Process_type_value={JSON.parse(ProcessNum).Type_num} title={"Computer Summary"}></ProcessChart>
                 </div>
 
                 
                 
-                <div className='Query_box2_L2'>
-                    <motion.button variants={buttonV} whileHover="hover" className='buttonQuery' onClick={()=>show_status_table()} >Fetch Process Status</motion.button>
-                    
-                </div>
+                
                 
 
 
             </div>
             <div className='Query_box2_L1'>
+            <h2 className='common'>Filter</h2>
                   <div className='Cal_type_Filter'>
 
                     <div>
@@ -93,7 +102,12 @@ export const ProcessStatus = () => {
                       ))}
                     </div>
                   </div>
+                  <div className='Query_box2_L2'>
+                    <motion.button variants={buttonV} whileHover="hover" className='buttonQuery' onClick={()=>show_status_table()} >Fetch Process Status</motion.button>
+                    
                 </div>
+                </div>
+
 
 
         </div>
